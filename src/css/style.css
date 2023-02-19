@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,400;0,500;1,500&family=Cormorant+Garamond:ital,wght@1,600&family=DynaPuff:wght@400;500;600&family=EB+Garamond:wght@400;500;600;700;800&family=Edu+VIC+WA+NT+Beginner:wght@400;500&family=Fira+Code:wght@300;400;500;600;700&family=Inconsolata:wght@200;400;500;600;800;900&family=Kumbh+Sans:wght@400;700&family=Manrope&family=Noto+Sans+Chakma&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,600;1,700&family=Oswald:wght@400;600;700&family=Outfit:wght@300;400;600&family=Passion+One&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,300;0,500;0,700;0,800;1,300;1,500;1,700;1,800&family=Roboto+Mono:ital,wght@0,500;1,100&family=Roboto:ital,wght@0,500;0,700;1,500;1,700&family=Silkscreen:wght@400;700&family=Square+Peg&family=VT323&display=swap');
+
+body{
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--dimWhite);
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+}
+
+.logo{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--darkGray);
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+b{
+    font-size: 70px;
+    color: var(--violet) ;
+}
+
+.navItems{
+    display: flex;
+}
+
+.navItems li{
+    margin: 0 15px;
+}
+
+.navItems li a{
+    font-size: 25px;
+    color: var(--darkGray);
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+
+.navItems li a:hover,
+.links a:hover{
+    color: var(--violet);
+}
+
+.links a{
+    font-size: 30px;
+    color: var(--darkGray);
+    margin:25px 10px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.cols{
+    width: 50%;
+}
+
+.topline{
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: var(--darkGray);
+}
+
+.topline::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: var(--violet);
+}
+
+h1{
+    display: block;
+    font-size: 6em;
+    font-weight: 900;
+    color: var(--darkGray);
+}
+
+.multiText{
+    color: var(--violet);
+    text-transform: capitalize;
+}
+
+p{
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    color: var(--darkGray);
+}
+
+.btns{
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    color: #fff;
+    background-color: var(--darkGray);
+    padding: 8px 14px;
+    margin: 40px 5px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0 , 0, 0.4);
+}
+
+button:hover{
+    background-color: var(--violet);
+}
+
+.imgbox{
+   position: relative;
+   width: 100%;
+   height: 100%; 
+}
+
+.imgbox img{
+    position: relative;
+    height: 100%;
+    width: calc(90% - 80px);
+    top: -100px;
+    right: 50px;
+    transform: rotateY(180deg);
+    animation: animateUser 4s linear infinite;
+}
+
+@keyframes animateUser{
+    50%{
+        right: 30px;
+        top: -90px;
+    }
+}
+
+.imgbox #splash{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-35deg);
+    width: 160%;
+    filter: saturate(200%);
+    animation: animateSplash 4s linear infinite;
+}
+
+@keyframes animateSplash{
+    50%{
+        left: 51%;
+        top: 49%;
+        width: 155%;
+    }
+}
