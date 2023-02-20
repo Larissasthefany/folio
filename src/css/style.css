@@ -31,7 +31,7 @@ nav{
 
 b{
     font-size: 70px;
-    color: var(--violet) ;
+    color: #0756a57a ;
 }
 
 .navItems{
@@ -51,7 +51,7 @@ b{
 
 .navItems li a:hover,
 .links a:hover{
-    color: var(--violet);
+    color: #0871dad9;
 }
 
 .links a{
@@ -68,6 +68,49 @@ b{
     height: 100vh;
     padding: 0 10%;
     overflow: hidden;
+}
+
+.wrapper::before{
+    position: absolute;
+    content: '';
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    left: -12%;
+    top: 40%;
+    background: linear-gradient(45deg, #72D0EC, #4390DB);
+    animation: object1 6s linear infinite;
+}
+
+.wrapper::after{
+    position: absolute;
+    content: '';
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 35%;
+    top: 12%;
+    background: linear-gradient(45deg,  #72D0EC, #4390DB);
+    animation: object2 6s linear infinite;
+}
+
+@keyframes object1{
+    50%{
+        left: 4%;
+        top: 41%;
+    }
+}
+
+@keyframes object2{
+    50%{
+        left: 35%;
+        top: 10%;
+    }
+}
+
+.cols0{
+    width: 60%;
+    z-index:5 ;
 }
 
 .cols{
@@ -99,7 +142,7 @@ h1{
 }
 
 .multiText{
-    color: var(--violet);
+    color: #0a86f3e2;
     text-transform: capitalize;
 }
 
@@ -131,7 +174,7 @@ button{
 }
 
 button:hover{
-    background-color: var(--violet);
+    background-color: #4390DB;
 }
 
 .imgbox{
@@ -144,7 +187,7 @@ button:hover{
     position: relative;
     height: 100%;
     width: calc(90% - 80px);
-    top: -100px;
+    top: -90px;
     right: 50px;
     transform: rotateY(180deg);
     animation: animateUser 4s linear infinite;
